@@ -1,0 +1,40 @@
+<ion-view view-title="Orders">
+    <ion-content class="padding" scroll="true">
+
+	<div class="list card" ng-repeat="order in ordersInfo">
+
+		<a ui-sref="app.tabs.order-detail({orderNum: order.order_no, deliveryStatus: order.dorder_status})" class="item">
+
+			<div class="item item-divider">
+
+				<ul>
+
+					<li>Order Number: {{order.order_no}}</li>
+					<li>Date & Time: {{order.date_time}}</li>
+
+				</ul>
+
+			</div>
+
+			<div class="item item-text-wrap">
+				
+				<ul>
+
+					<li>Admin Payment Status: {{order.admin_payment_status}}</li>
+					<li>Delivery Type: {{order.delivery_type}}</li>
+					<li>Order Amount: ${{order.grandTotal}}</li>
+					<li>Order Status: {{order.order_status}}</li>
+					<li>Delivery Status: {{order.dorder_status}}</li>
+					<li>Your Earning: {{order.res_earning}}</li>
+					<li>Instruction: {{order.spcl_instruction}}</li>
+
+				</ul>
+
+			</div>
+
+		</a>
+
+	</div>
+
+    </ion-content>
+</ion-view>

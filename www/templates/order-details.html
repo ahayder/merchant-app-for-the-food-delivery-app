@@ -1,0 +1,47 @@
+<ion-view view-title="Order Details">
+
+  <ion-content>
+
+    <div class="card">
+
+		  <a href="#" class="item">
+			
+			<div class="item item-divider">
+
+				<ul>
+
+					<li>Name: {{ordersDetail.food_name}}</li>
+					<li>Date & Time: {{ordersDetail.order_date_time}}</li>
+					<li>Price: {{ordersDetail.food_price}}</li>
+
+				</ul>
+
+			</div>
+			
+			<div class="item item-text-wrap">
+				
+				<ul>
+
+					<li>Quantity: {{ordersDetail.food_qty}}</li>
+					<li>Size: {{ordersDetail.size_name}}</li>
+					<li>Order Number: {{ordersDetail.order_no}}</li>
+					
+				</ul>
+
+			</div>
+
+		  </a>
+
+		  <button class="button button-clear button-positive icon-left ion-checkmark" ng-click="confirmOrderPopup()" ng-hide="confirmation">
+		  Confirm Order
+		</button>
+
+		<button class="button button-clear button-positive icon-right ion-checkmark-circled" ng-hide="!confirmation">
+		  Confirmed
+		</button>
+
+	</div>
+
+  </ion-content>
+
+</ion-view>

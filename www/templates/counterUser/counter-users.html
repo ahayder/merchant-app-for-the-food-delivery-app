@@ -1,0 +1,18 @@
+<ion-view title="Counter Users">
+    <ion-nav-buttons side="right">
+      <button class="button" ng-click="addNewCounterUserModal()">
+        <i class="icon ion-ios-plus"></i>
+      </button>
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="true" padding="true" class="has-header has-subheader bar-light">
+        <ion-list ng-repeat="cuser in cusers">
+            <ion-item class="item">
+                Username: {{cuser.username}} </br>
+                Password: {{cuser.password}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+
+

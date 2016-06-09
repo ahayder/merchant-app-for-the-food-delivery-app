@@ -1,0 +1,39 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-assertive">
+	  	<h1 class="title">Add New Driver</h1>
+	</ion-header-bar>
+
+	<ion-content class="padding">
+
+	  	<div class="list">
+            <label class="item item-input">
+                <input type="text" ng-model="driver.name" placeholder="Name">
+            </label>
+            <label class="item item-input">
+                <input type="number" ng-model="driver.phone" placeholder="Phone Number">
+            </label>
+            <label class="item item-input">
+                <input type="number" ng-model="driver.license" placeholder="Driving Lincense No.">
+            </label>
+            <label class="item item-input">
+                <input type="number" ng-model="driver.position" placeholder="Driver Position">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="driver.username" placeholder="Username">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="driver.password" placeholder="Password">
+            </label>
+            <ion-radio ng-model="driver.status" ng-value="'Approved'">Approved</ion-radio>
+			<ion-radio ng-model="driver.status" ng-value="'Unapproved'">Unapproved</ion-radio>
+        </div>
+
+        <button class="button button-full button-positive" ng-click="saveDriver(driver)">
+		  Save
+		</button>
+		<button class="button button-full button-assertive" ng-click="closeModal()">
+		  Cancel
+		</button>
+
+	</ion-content>
+</ion-modal-view>
